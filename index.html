@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script>
   // Opened without the trailing slash (…/papaya-hatidgo-manual): continue with it, so img/ loads.
-  if (!location.pathname.endsWith('/') && !/.[a-z]+$/i.test(location.pathname)) {
+  if (!location.pathname.endsWith('/') && !/\.[a-z0-9]+$/i.test(location.pathname)) {
     location.replace(location.pathname + '/' + location.search + location.hash);
   }
 </script>
