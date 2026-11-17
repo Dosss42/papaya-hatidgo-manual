@@ -128,6 +128,14 @@
   .btn-outline:hover { background: var(--ground); color: var(--papaya-pressed); }
   .apk-meta { margin-top: 10px; color: var(--ink-soft); font-size: .95rem; }
 
+  /* Opened from a friend's Refer & earn QR (?ref=CODE): the code to enter at sign-up. */
+  .invite {
+    margin-top: 18px; padding: 14px 16px; border-radius: 16px; max-width: 30rem;
+    background: var(--leaf-tint); border: 2px solid var(--leaf); color: var(--ink);
+  }
+  .invite[hidden] { display: none; }
+  .invite strong.code { display: block; margin-top: 4px; font-size: 1.8rem; letter-spacing: .14em; }
+
   .qr-card {
     background: var(--ground); border: 1px solid var(--line); border-radius: 22px;
     padding: 28px; text-align: center; box-shadow: 0 12px 32px -18px rgb(28 23 20 / .35);
@@ -291,6 +299,7 @@
           <span id="apk-label">Download the app (APK)</span>
         </a>
         <p class="apk-meta" id="apk-meta">Version 1.0 · Android app file (.apk)</p>
+        <p class="invite" id="invite" hidden>A friend invited you. When you create your account, enter this <strong>referral code</strong>:<strong class="code" id="invite-code"></strong></p>
       </div>
 
       <aside class="qr-card" aria-labelledby="qr-title">
@@ -346,6 +355,7 @@
             <li>Tap <span class="ui">Get Started</span>.</li>
             <li>Under <strong>Who are you?</strong>, choose <span class="ui">Passenger</span> or <span class="ui">Driver</span>.</li>
             <li>Enter your first and last name, mobile number, email and a password (8 or more characters, with a letter and a number).</li>
+            <li>Got a <strong>referral code</strong> from a friend? Type it in <span class="ui">Referral code (optional)</span>, or tap <span class="ui">Scan</span> and scan their QR. You can leave it empty.</li>
             <li>Tap <span class="ui">Create account</span>. You're logged in right away.</li>
           </ol>
         </div>
@@ -389,6 +399,7 @@
             <li>Tap <span class="ui">Pay</span>. You pay on PayMongo's secure page with <strong>GCash, Maya or a card</strong>. Papaya HatidGo never sees your card or PIN.</li>
             <li>Come back to the app. It shows <strong>Payment received!</strong> and the date your subscription runs until.</li>
           </ol>
+          <p>Without an active subscription, the app shows only the <strong>Renew</strong> screen: <span class="ui">Renew now</span>, <span class="ui">I already paid · Check again</span>, Refer &amp; earn, Language and Logout. A ride that is already going is never cut off.</p>
           <p class="note"><span aria-hidden="true">i</span><span>While the project is in <strong>test mode</strong>, no real money is charged. You can <span class="ui">Renew early</span> at any time, and the new months start when the current ones end, so no paid day is lost.</span></p>
         </div>
         <div class="shots">
@@ -469,8 +480,12 @@
 
       <div class="row wide flip">
         <div>
+          <h3>Already at a tricycle? Ride with a QR</h3>
+          <p>If a Papaya HatidGo driver is right there, set your trip as usual, then tap <span class="ui">Driver is here? Ride now with QR</span> instead of Book. Your phone shows a <strong>QR code</strong> and a 6-letter code. The driver scans it (or types the code) and the ride starts at once, at the same fare. The QR works for 10 minutes.</p>
+          <h3>Refer &amp; earn</h3>
+          <p>In <span class="ui">Account</span> › <span class="ui">Refer &amp; earn</span> you find your code and its QR. Friends scan it with their camera to download the app, then enter your code when they sign up. When a friend who used your code <strong>pays their first subscription</strong>, you get points (100 by default). Enough points (300) give you <strong>a free month</strong>: tap <span class="ui">Get a free month</span> whenever you like. Drivers can refer people too.</p>
           <h3>Your account</h3>
-          <p>The <span class="ui">Account</span> tab shows your name and number, the <strong>language</strong>, your <strong>subscription</strong>, and <span class="ui">Logout</span>.</p>
+          <p>The <span class="ui">Account</span> tab shows your name and number, the <strong>language</strong>, your <strong>subscription</strong>, <strong>Refer &amp; earn</strong>, and <span class="ui">Logout</span>.</p>
         </div>
         <div class="shots">
           <figure><div class="phone"><img src="img/rides.webp" alt="Rides: a list of rides with date, route, fare and status (Completed or Cancelled)." loading="lazy" width="390" height="844"></div><figcaption>Rides</figcaption></figure>
@@ -559,6 +574,8 @@
         <div>
           <h3>Earnings</h3>
           <p>The <span class="ui">Earnings</span> tab adds up the cash from your finished rides for <strong>Today</strong>, <strong>This week</strong> and <strong>This month</strong>, with the list of rides. Home also shows today's total.</p>
+          <h3>A passenger at your tricycle (QR)</h3>
+          <p>While on duty, a passenger standing at your tricycle can show a QR from their app. Tap <span class="ui">Scan passenger QR</span> on Home and scan it, or tap <span class="ui">Type code</span> and type the 6 letters under it. The ride opens right away at <strong>Here</strong>; tap <span class="ui">Start the trip</span> when they're on board.</p>
           <h3>Taken offline?</h3>
           <p>The app takes you offline if your subscription ends, a document expires or needs fixing, your account is suspended, or your location stops arriving for a while. Home tells you why and links to the fix.</p>
         </div>
@@ -675,6 +692,14 @@
     document.getElementById('apk-label').textContent = 'APK coming soon';
     document.getElementById('apk-meta').textContent = "The app file hasn't been uploaded yet.";
   });
+
+  // Refer & earn: a friend's QR opens this page with ?ref=CODE. Show the code to type at sign-up.
+  // Only a real code shape (6 letters/digits, no 0/O/1/I/L) is shown, and only as text.
+  const ref = (new URLSearchParams(location.search).get('ref') || '').toUpperCase().replace(/[\s-]/g, '');
+  if (/^[A-HJKMNP-Z2-9]{4,10}$/.test(ref)) {
+    document.getElementById('invite-code').textContent = ref;
+    document.getElementById('invite').hidden = false;
+  }
 
   // Light / dark switch (remembered on this browser only).
   const root = document.documentElement;
