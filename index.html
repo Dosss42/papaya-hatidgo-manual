@@ -292,7 +292,7 @@
           <li>Android 7.0 or newer</li>
           <li>For passengers and drivers</li>
           <li>English or Taglish</li>
-          <li>Pay the driver in cash</li>
+          <li>Pay in cash or in the app</li>
         </ul>
         <a class="btn" id="apk-button" href="https://github.com/Dosss42/papaya-hatidgo-manual/releases/latest/download/papaya-hatidgo.apk">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
@@ -388,24 +388,27 @@
     <div class="wrap">
       <span class="kicker">For passengers</span>
       <h2 id="pax-h">Booking a tricycle</h2>
-      <p class="intro">The app has four tabs at the bottom: <strong>Book</strong>, <strong>Rides</strong>, <strong>Alerts</strong> and <strong>Account</strong>. You pay the driver in cash when the ride ends.</p>
+      <p class="intro">The app has four tabs at the bottom: <strong>Book</strong>, <strong>Rides</strong>, <strong>Alerts</strong> and <strong>Account</strong>. When the ride ends, you pay the driver in cash, or in the app with GCash, Maya or a card.</p>
 
-      <div class="row">
+      <div class="row wide">
         <div>
-          <h3>First, subscribe</h3>
-          <p><strong>Why a subscription?</strong> It keeps Papaya HatidGo running: the server, the maps, and fixing and improving the app. It is not a fee per ride: the fare goes to the driver, in cash.</p>
-          <p>Booking needs an active subscription. Tap <span class="ui">Subscribe</span> on the Book tab, or go to <span class="ui">Account</span> › <span class="ui">Subscription</span>.</p>
-          <ol class="steps">
-            <li><strong>New account?</strong> Tap <span class="ui">Start my free month</span>: the first month is free, once per account (for drivers, once their papers are approved).</li>
-            <li>Or choose a plan: 1, 3, 6, 9 or 12 months, the same for passengers and drivers: ₱69 a month (₱69, ₱207, ₱414, ₱621, ₱828). The admin sets the prices.</li>
-            <li>Tap <span class="ui">Pay</span>. You pay on a secure payment page (Xendit) with <strong>GCash, Maya or a card</strong>. Papaya HatidGo never sees your card or PIN.</li>
-            <li>Come back to the app. It shows <strong>Payment received!</strong> and the date your subscription runs until.</li>
-          </ol>
-          <p>Without an active subscription, the app shows only the subscription screen (no way back): the plans and <span class="ui">Pay</span>, <span class="ui">I already paid · Check again</span>, Refer &amp; earn, Language and Logout. A ride that is already going is never cut off.</p>
-          <p class="note"><span aria-hidden="true">i</span><span>While the project is in <strong>test mode</strong>, no real money is charged. You can <span class="ui">Renew early</span> at any time, and the new months start when the current ones end, so no paid day is lost.</span></p>
-        </div>
-        <div class="shots">
-          <figure><div class="phone"><img src="img/subscription.webp" alt="Subscription screen: active until a date, and plans of 1, 6 and 12 months with a Pay button." loading="lazy" width="390" height="844"></div><figcaption>Subscription</figcaption></figure>
+          <h3>What it costs</h3>
+          <p>There is <strong>no subscription</strong>: you pay only when you ride. Each ride is the <strong>fare</strong> (it goes to the driver) plus a small <strong>service fee</strong> (5%, set by the admin) that keeps Papaya HatidGo running: the server, the maps, and fixing and improving the app. The total is rounded <strong>down</strong> to whole pesos, in your favor.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th scope="col">Ride</th><th scope="col">Fare</th><th scope="col">You pay</th></tr></thead>
+              <tbody>
+                <tr><td>A regular ride</td><td>₱52.20</td><td><strong>₱54</strong></td></tr>
+                <tr><td>First 3 rides</td><td>₱52.20</td><td><strong>₱52.20</strong></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <ul>
+            <li><strong>New here?</strong> Your first 3 rides have no service fee.</li>
+            <li><strong>Refer &amp; earn points</strong> also make rides fee-free (see below).</li>
+            <li><strong>Senior citizen, PWD or student?</strong> Apply for a <strong>Discount ID</strong> (see below): your share has no service fee.</li>
+          </ul>
+          <p class="note"><span aria-hidden="true">i</span><span>The fare card shows the service fee as its own line before you book, so nothing is hidden. Cancelled rides and "no driver found" cost nothing.</span></p>
         </div>
       </div>
 
@@ -413,7 +416,7 @@
         <div>
           <h3>Book in three steps</h3>
           <ol class="steps">
-            <li><strong>Pickup.</strong> The map starts at your location. Move the map so the pin sits where the driver should pick you up, or tap <span class="ui">Use my location</span>. You can also search a place, such as the public market or a school. The app names the spot for you, and you can add a landmark (for example <em>blue gate</em>). Tap <span class="ui">Pick me up here</span>.</li>
+            <li><strong>Pickup.</strong> The map starts at your location, and shows how many <strong>drivers are near you</strong> right now. Move the map so the pin sits where the driver should pick you up, or tap <span class="ui">Use my location</span>. You can also search a place, such as the public market or a school. The app names the spot for you, and you can add a landmark (for example <em>blue gate</em>). Tap <span class="ui">Pick me up here</span>.</li>
             <li><strong>Destination.</strong> Move the map to where you're going, or search it. Tap <span class="ui">I'm going here</span>.</li>
             <li><strong>Choose your ride.</strong> The fare for each ride type is shown. Pick one, then tap <span class="ui">Book · ₱…</span>.</li>
           </ol>
@@ -428,7 +431,7 @@
       <div class="row">
         <div>
           <h3>Tricycle or motorcycle?</h3>
-          <p>At step 3, choose <span class="ui">Tricycle</span> or <span class="ui">Motorcycle</span>; each shows its price. A <strong>motorcycle</strong> carries <strong>1 passenger</strong>, is <strong>One-way</strong> only, and has its own fare (₱10 per km to start). Only drivers with the vehicle you chose get your request.</p>
+          <p>At step 3, choose <span class="ui">Tricycle</span> or <span class="ui">Motorcycle</span>; each shows its price. A <strong>motorcycle</strong> carries <strong>1 passenger</strong>, is <strong>One-way</strong> only, and has its own fare (₱10 per km to start). Only drivers with the vehicle you chose get your request. When the admin has motorcycles switched off, the tile says <em>Under maintenance, coming soon</em> and can't be chosen.</p>
           <h3>One-way or Balikan?</h3>
           <div class="cards">
             <div class="card"><h4>One-way</h4><p>Drop-off only. The driver takes you to your destination and the ride ends there.</p></div>
@@ -438,7 +441,7 @@
           <ul>
             <li><strong>Base fare</strong> plus the <strong>distance</strong> (km × the rate per km). Short trips cost at least the minimum fare.</li>
             <li>Balikan adds the <strong>way back</strong>, and a <strong>waiting fee</strong> if the admin has set one. The waiting rule is shown, for example <em>First 10 min free, then ₱2/min</em>. You're charged for the time you really wait.</li>
-            <li>A <strong>service fee</strong> appears only if the admin has set one.</li>
+            <li>The <strong>service fee</strong> (5%) on its own line, or the reason there is none (<em>new passenger</em>, <em>your points</em>, <em>discount ID</em>).</li>
           </ul>
           <p>The fare shown is an <strong>estimate</strong>. You can add a message for the driver (for example <em>I have a big bag</em>) before booking.</p>
         </div>
@@ -472,7 +475,9 @@
           <h3>Balikan: waiting and coming back</h3>
           <p>At your destination, the driver waits. The screen shows how long you said you'd stay and how many minutes have passed. When you're ready to go home, tap <span class="ui">I'm coming back</span> so the driver gets ready.</p>
           <h3>Paying and rating</h3>
-          <p>When the ride ends, the app shows <strong>Pay [driver] ₱… (cash)</strong>. If the final fare is different from the estimate (for example, you waited less), both are shown. Then rate the ride from 1 to 5 stars, with an optional note, or tap <span class="ui">Later</span>.</p>
+          <p>When the ride ends, the app shows <strong>Pay [driver] ₱… (cash)</strong>. If the final fare is different from the estimate (for example, you waited less), both are shown.</p>
+          <p><strong>Rather pay in the app?</strong> Tap <span class="ui">Pay in the app (GCash, Maya, card)</span> (within a day of the ride). You pay on a secure Xendit page; Papaya HatidGo never sees your PIN or card number. The ride then shows <em>Paid in the app</em>, and the driver knows not to collect cash.</p>
+          <p>Then rate the ride from 1 to 5 stars, with an optional note, or tap <span class="ui">Later</span>. If you give 1 or 2 stars, tap what went wrong (rude, unsafe driving, late, asked for more): the office reviews it.</p>
           <h3>Rides and Alerts</h3>
           <p><span class="ui">Rides</span> lists your rides, newest first, with the fare and status. You can rate a ride you skipped there. <span class="ui">Alerts</span> collects ride updates, payment news and reminders.</p>
         </div>
@@ -487,14 +492,22 @@
           <h3>Already at a tricycle? Ride with a QR</h3>
           <p>If a Papaya HatidGo driver is right there, set your trip as usual, then tap <span class="ui">Driver is here? Ride now with QR</span> instead of Book. Your phone shows a <strong>QR code</strong> and a 6-letter code. The driver scans it (or types the code) and the ride starts at once, at the same fare. The QR works for 10 minutes.</p>
           <h3>Refer &amp; earn</h3>
-          <p>In <span class="ui">Account</span> › <span class="ui">Refer &amp; earn</span> you find your code and its QR. Friends scan it with their camera to download the app, then enter your code when they sign up. When a friend who used your code <strong>pays their first subscription</strong>, you get points (100 by default). Enough points (300) give you <strong>a free month</strong>: tap <span class="ui">Get a free month</span> whenever you like. Drivers can refer people too.</p>
+          <p>In <span class="ui">Account</span> › <span class="ui">Refer &amp; earn</span> you find your code and its QR. Friends scan it with their camera to download the app, then enter your code when they sign up. When a friend who used your code <strong>finishes their first ride</strong>, you get points (100 by default). Every 50 points make <strong>one fee-free ride</strong>, used by itself on your next rides (passengers: no service fee; drivers: no commission). Drivers can refer people too.</p>
+          <h3>Senior citizen, PWD or student: Discount ID</h3>
+          <ol class="steps">
+            <li>Add your <strong>profile photo</strong> first (Account), so the driver can see the ID holder is the one riding.</li>
+            <li>Go to <span class="ui">Account</span> › <span class="ui">Discount ID</span>. Choose <em>Senior Citizen ID</em>, <em>PWD ID</em> or <em>Student ID</em> and take a photo of it. Students also add a <strong>proof of enrollment</strong> (COR or registration form) for this semester.</li>
+            <li>Agree to the rule (the discount is only for you, while you're the one riding) and tap <span class="ui">Send for review</span>. The office approves it with an expiry date, and the photos are <strong>deleted</strong> right after.</li>
+            <li>From then on, Book asks <strong>Who is riding?</strong> <em>Me</em>: your share has no service fee; show your ID to the driver at pickup. <em>Someone else</em>: enter their name and number; it's the normal fare. With a group, tell how many riders have an ID: the driver checks each one.</li>
+          </ol>
+          <p class="note"><span aria-hidden="true">i</span><span>No Discount ID but riding with seniors, PWD or students? Book normally: they show their IDs to the driver at pickup, and the driver counts them.</span></p>
           <h3>Your account</h3>
-          <p>The <span class="ui">Account</span> tab shows your name and number, the <strong>language</strong>, your <strong>subscription</strong>, <strong>Refer &amp; earn</strong>, and <span class="ui">Logout</span>.</p>
+          <p>The <span class="ui">Account</span> tab shows your name and number, your photo, the <strong>language</strong>, <strong>Discount ID</strong>, <strong>Refer &amp; earn</strong>, and <span class="ui">Logout</span>.</p>
         </div>
         <div class="shots">
           <figure><div class="phone"><img src="img/rides.webp" alt="Rides: a list of rides with date, route, fare and status (Completed or Cancelled)." loading="lazy" width="390" height="844"></div><figcaption>Rides</figcaption></figure>
-          <figure><div class="phone"><img src="img/alerts.webp" alt="Alerts: ride completed and subscription active messages, marked New." loading="lazy" width="390" height="844"></div><figcaption>Alerts</figcaption></figure>
-          <figure><div class="phone"><img src="img/account.webp" alt="Account: name, mobile number, email, language, subscription and Logout." loading="lazy" width="390" height="844"></div><figcaption>Account</figcaption></figure>
+          <figure><div class="phone"><img src="img/alerts.webp" alt="Alerts: ride updates and other messages, marked New." loading="lazy" width="390" height="844"></div><figcaption>Alerts</figcaption></figure>
+          <figure><div class="phone"><img src="img/account.webp" alt="Account: name, mobile number, email, language and Logout." loading="lazy" width="390" height="844"></div><figcaption>Account</figcaption></figure>
         </div>
       </div>
     </div>
@@ -515,7 +528,7 @@
             <li><strong>Your tricycle.</strong> Enter the plate number and color (body number, brand and model are optional). Tap <span class="ui">Add tricycle</span>.</li>
             <li><strong>Documents.</strong> Upload a clear photo (or PDF) of each: <em>Driver's license</em>, <em>Tricycle's OR/CR</em>, <em>Franchise / MTOP permit</em> and <em>Clearance</em>, with the expiry date. Make sure all four corners show, the text is clear, and there's no flash glare.</li>
             <li><strong>Wait for the admin.</strong> Each document shows <em>Under review</em>, then <em>Approved</em> or <em>Needs fixing</em> with the admin's reason. Fix it and upload again.</li>
-            <li><strong>Subscribe.</strong> Once you're verified, choose a plan and pay, just like passengers.</li>
+            <li><strong>Done.</strong> Once everything is approved, you can go online. There is no subscription to pay.</li>
           </ol>
           <p class="note"><span aria-hidden="true">i</span><span>Only the Papaya HatidGo admin can see your documents. When a document is close to expiring, the app reminds you. Upload the new copy early, and the old one keeps counting until it's approved.</span></p>
         </div>
@@ -531,7 +544,8 @@
           <ol class="steps">
             <li>On Home, tap <span class="ui">Go online</span> and allow your location.</li>
             <li><strong>Requests near you</strong> lists every open booking in town, <strong>nearest first</strong>: the pickup, how far it is from you, the trip length, the fare, and One-way or Balikan.</li>
-            <li>Tap a request to see the details (and the passenger's message), then tap <span class="ui">Accept</span> or <span class="ui">Skip</span>. If another driver took it first, the app tells you.</li>
+            <li>Tap a request to see the details (and the passenger's message), then tap <span class="ui">Accept</span> or <span class="ui">Skip</span>. The big number is <strong>what you keep</strong> after the commission. If another driver took it first, the app tells you.</li>
+            <li><strong>Fair turns:</strong> among drivers about equally near a passenger, the one who has waited longest since their last ride gets the request first.</li>
           </ol>
           <h4>Auto-accept</h4>
           <p>Tap <span class="ui">Auto-accept</span> and choose a distance from 2 to 5 km. A request whose pickup is that close is accepted for you, and the ride opens. Choose <em>Off: I choose myself</em> to stop it.</p>
@@ -553,11 +567,11 @@
               <thead><tr><th scope="col">Button</th><th scope="col">When</th></tr></thead>
               <tbody>
                 <tr><td>I'm on my way</td><td>You start driving to the pickup. The passenger sees you coming.</td></tr>
-                <tr><td>I'm here</td><td>You're at the pickup.</td></tr>
+                <tr><td>I'm here</td><td>You're at the pickup. If riders show a Senior / PWD / Student ID, set <em>Riders with an ID</em> and tap <span class="ui">IDs checked</span> before starting.</td></tr>
                 <tr><td>Start the trip</td><td>The passenger is on board.</td></tr>
                 <tr><td>We're at the destination</td><td>Balikan only: you've arrived, and you now wait.</td></tr>
                 <tr><td>We're heading back</td><td>Balikan only: the passenger is back on board.</td></tr>
-                <tr><td>Finish the ride</td><td>Drop-off done. The app shows the cash to collect.</td></tr>
+                <tr><td>Finish the ride</td><td>Drop-off done. The app shows the cash to collect, or <em>Paid in the app</em> (then collect nothing).</td></tr>
               </tbody>
             </table>
           </div>
@@ -576,12 +590,17 @@
 
       <div class="row flip">
         <div>
-          <h3>Earnings</h3>
-          <p>The <span class="ui">Earnings</span> tab adds up the cash from your finished rides for <strong>Today</strong>, <strong>This week</strong> and <strong>This month</strong>, with the list of rides. Home also shows today's total.</p>
+          <h3>Earnings, fees and your balance</h3>
+          <p>There is <strong>no subscription</strong>. Papaya HatidGo takes a <strong>5% commission</strong> from each fare (the passenger also pays a 5% service fee on top). The <span class="ui">Earnings</span> tab shows <strong>what you keep</strong> for <strong>Today</strong>, <strong>This week</strong> and <strong>This month</strong>.</p>
+          <ul>
+            <li><strong>Cash rides:</strong> you keep all the cash, so the platform's share (the fee and the commission) goes on your <strong>balance</strong>. Pay it after earning: at the office, or tap <span class="ui">Pay ₱… now in the app</span>. If you owe more than <strong>₱150</strong>, settle before going online again (you're never stopped in the middle of a shift).</li>
+            <li><strong>Rides paid in the app</strong> and bonuses become <strong>credit</strong>: it pays your next fees, or tap <span class="ui">Cash out to GCash / Maya</span> (from ₱100).</li>
+            <li><strong>Lower commission:</strong> no commission in your <strong>first week</strong> (up to 20 rides); it stops at <strong>₱30 a day</strong>; more rides in a week lower it (20+ → 4%, 30+ → 3%, 40+ → 2% and a <strong>₱50 bonus</strong>); a 4.8★ month lowers it by 1%. Senior / PWD shares have no commission.</li>
+          </ul>
           <h3>A passenger at your tricycle (QR)</h3>
           <p>While on duty, a passenger standing at your tricycle can show a QR from their app. Tap <span class="ui">Scan passenger QR</span> on Home and scan it, or tap <span class="ui">Type code</span> and type the 6 letters under it. The ride opens right away at <strong>Here</strong>; tap <span class="ui">Start the trip</span> when they're on board.</p>
           <h3>Taken offline?</h3>
-          <p>The app takes you offline if your subscription ends, a document expires or needs fixing, your account is suspended, or your location stops arriving for a while. Home tells you why and links to the fix.</p>
+          <p>The app takes you offline if a document expires or needs fixing, your account is suspended, or your location stops arriving for a while. Going online is refused while you owe more than the limit. Home tells you why and links to the fix.</p>
         </div>
         <div class="shots">
           <figure><div class="phone"><img src="img/earnings.webp" alt="Earnings: Today, This week, This month; the total and the finished rides." loading="lazy" width="390" height="844"></div><figcaption>Earnings</figcaption></figure>
@@ -597,11 +616,11 @@
       <h2 id="admin-h">The admin website</h2>
       <p class="intro">Papaya HatidGo is run from a separate website on a computer, for the admin only. Admin accounts can't log in to the phone app.</p>
       <div class="cards">
-        <div class="card"><h4>Dashboard</h4><p>Today's rides, fares, drivers online and active subscriptions.</p></div>
-        <div class="card"><h4>Users and verification</h4><p>Review each driver's documents and tricycle, then approve, reject with a reason, or ask for a fix. Suspend or reactivate accounts.</p></div>
+        <div class="card"><h4>Dashboard</h4><p>Today's rides, fares, drivers online, fees earned this month and what drivers owe.</p></div>
+        <div class="card"><h4>Users and verification</h4><p>Review each driver's documents and tricycle, and passengers' Discount IDs. Record what a driver paid on their balance. See drivers who need a review (low ratings), then suspend or reactivate accounts.</p></div>
         <div class="card"><h4>Rides and live map</h4><p>See online drivers and active rides on a map, along the roads they take.</p></div>
-        <div class="card"><h4>Fares and settings</h4><p>Set the base fare, rate per km, minimum fare, Balikan way back and waiting fee, and the service fee. Switch ride types on or off, and set the service area and the matching rules.</p></div>
-        <div class="card"><h4>Plans, reports and audit log</h4><p>Edit subscription plans, read ride and income reports, and see who changed what.</p></div>
+        <div class="card"><h4>Fares and settings</h4><p>Set the fare, the passenger's service fee and the driver's commission, the owed limit, waivers and bonuses, discounts, the rating watch, and the matching rules.</p></div>
+        <div class="card"><h4>Payments, reports and audit log</h4><p>See settlements, rides paid in the app and cash-outs; read the rides, drivers, users and <em>Earnings &amp; fees</em> reports; and see who changed what.</p></div>
       </div>
       <div class="admin-shots">
         <figure class="browser"><img src="img/admin-dashboard.webp" alt="Admin dashboard with today's numbers." loading="lazy" width="1440" height="1000"><figcaption>Dashboard</figcaption></figure>
@@ -647,7 +666,15 @@
       </details>
       <details>
         <summary>As a driver, I don't see any requests.</summary>
-        <div><p>Make sure you're <em>online</em>, your location is on, and your documents, tricycle and subscription are all approved and active. Requests only appear while someone is booking.</p></div>
+        <div><p>Make sure you're <em>online</em>, your location is on, your documents and tricycle are approved, and you don't owe more than the limit. Requests only appear while someone is booking.</p></div>
+      </details>
+      <details>
+        <summary>Why do I pay a service fee?</summary>
+        <div><p>Instead of a monthly subscription, Papaya HatidGo takes a small fee only when you ride (5% from the passenger, 5% from the driver). It pays for the server, the maps, permits and improving the app. New accounts, points and Discount IDs make it free.</p></div>
+      </details>
+      <details>
+        <summary>I paid in the app but it still says to pay the driver.</summary>
+        <div><p>It can take a minute. Pull down to refresh the ride. If the payment page was closed before paying, nothing was charged: pay in cash or try again.</p></div>
       </details>
     </div>
   </section>
